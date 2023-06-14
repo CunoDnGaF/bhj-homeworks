@@ -12,7 +12,7 @@ taskAdd.addEventListener('click', e => {
   
   if (!taskInput.value) {
     return;
-  } else {
+  } 
     let task = document.createElement('div');
     task.className = 'task';
     task.innerHTML = `<div class="task__title">${taskInput.value}</div><a href="#" class="task__remove">&times;</a>`;
@@ -20,6 +20,7 @@ taskAdd.addEventListener('click', e => {
     task.addEventListener('click', e => taskRemove(e,task));
   
     tasksList.appendChild(task);
-  }
+    taskInput.value = ''.trim();
+  
 })
 

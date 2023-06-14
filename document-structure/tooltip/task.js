@@ -8,5 +8,7 @@ for (let i of hasTooltips) {
     e.preventDefault();
     let tooltip = i.nextSibling;
     tooltip.classList.toggle('tooltip_active');
+    tooltip.style.top = e.target.getBoundingClientRect().top + 20 + 'px';
+    tooltip.style.left = e.target.getBoundingClientRect().left + 'px';
   });
 }
