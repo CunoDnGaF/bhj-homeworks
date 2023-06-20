@@ -8,12 +8,14 @@ sendBtn.addEventListener('click', function(e) {
     e.preventDefault();
     
     xhr.open('POST', form.action);
-    xhr.onprogress = function(e) {
+    xhr.upload.onprogress = function(e) {
     
         let loadProgress = e.loaded / e.total;
         progress.value = loadProgress;
+        console.log(progress.value);
     }
     
     xhr.send(formData);
+    
     
 });
